@@ -1428,7 +1428,7 @@ async function doSendReport() {
     const data = await res.json();
 
     if (data.success) {
-      statusEl.innerHTML = `✅ ${data.message}<br><a href="${data.fileUrl}" target="_blank" style="color:var(--secondary);">📄 Xem file trên Drive</a>`;
+      statusEl.innerHTML = `${data.message}<br><a href="${data.fileUrl}" target="_blank" style="color:var(--secondary);">📄 Xem file trên Drive</a>`;
       statusEl.className = "modal-status ok";
     } else {
       throw new Error(data.message);
